@@ -1,3 +1,4 @@
+local ESP = getgenv().ESP
 if ESP and ESP.Unload then
     ESP.Unload()
 end
@@ -31,7 +32,7 @@ local math_clamp, math_round, math_floor, math_huge, math_sin, math_cos, math_pi
 local Drawing_new, Rect_new, Font_new, ColorSequence_new, ColorSequenceKeypoint_new, TweenInfo_new, NumberSequence_new, NumberSequenceKeypoint_new = Drawing.new, Rect.new, Font.new, ColorSequence.new, ColorSequenceKeypoint.new, TweenInfo.new, NumberSequence.new, NumberSequenceKeypoint.new
 local FindFirstChild, GetChildren, GetDescendants, WaitForChild, FindFirstChildWhichIsA, IsA = game.FindFirstChild, game.GetChildren, game.GetDescendants, game.WaitForChild, game.FindFirstChildWhichIsA, game.IsA
 
-getgenv().ESP = {
+ESP = {
     Settings = {
         Players = {
             Enabled = false,
@@ -1215,4 +1216,5 @@ do -- Connections
     end))
 end
 
+getgenv().ESP = ESP
 return Esp, MiscOptions
