@@ -1217,4 +1217,4 @@ do -- Connections
 end
 
 getgenv().ESP = ESP
-return Esp, MiscOptions
+return ESP, {}
